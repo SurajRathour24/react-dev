@@ -1,13 +1,18 @@
 import React from 'react'
+import Card from './components/Card';
+import Navbar from './components/Navbar';
+
 
 const App = () => {
   return (
     <>
-      <div className="parent">
-        <h1>Parent Div</h1>
-      </div>
-      <div className="child">
-        <h2>Child Div</h2>
+      <div className="parent container">
+        <Navbar/>
+          <div className="card-wrapper flexbox">
+            <Card/>
+            <Card/>
+            <Card/>
+          </div>
       </div>
     </>
   )
