@@ -8,9 +8,9 @@ const App = () => {
         <Navbar />
 
         <div className="card-container">
-          <Card />
-          <Card />
-          <Card />
+          <Card companyName="Amazon" designation="Senior FrontEnd Developer"  rate={150} />
+          <Card companyName="Google" designation="Junior FrontEnd Developer"  rate={200} />
+          <Card companyName="Facebook" designation="FrontEnd Developer"  rate={130} />
         </div>
     </div>
   )

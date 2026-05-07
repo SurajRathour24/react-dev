@@ -1,16 +1,16 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (prop) => {
   return (
     <div>
       <div className="mainCard">
             <div className="top-bar">
-              <div className="logo">LOGO</div>
+              <div className="logo">{prop.companyName}</div>
               <div className="save-btn">Save</div>
             </div>
             <div className="content">
               <div className="company-name">Google <span>5 days ago</span></div>
-              <div className="designation">Senior Frontend Developer</div>
+              <div className="designation">{prop.designation}</div>
               <div className="job-type">
                 <button className="batch">Part Time</button>
                 <button className="batch">Senior Level</button>
@@ -18,7 +18,7 @@ const Card = () => {
             </div>
             <div className="card-footer">
               <div className="left-amount">
-                <h6>$120/hr </h6>
+                <h6>${prop.rate}/hr </h6>
                 <p>Mumbai India</p>
               </div>
               <button className="primary">Apply Now</button>
