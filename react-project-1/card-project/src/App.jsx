@@ -3,6 +3,21 @@ import Navbar from './components/Navbar';
 import Card from './components/Card'
 
 const App = () => {
+
+  let jobOpenings = [
+    {
+      company: "Facebook",
+      job: "Frontend Developer"
+    },
+    {
+      company: "Amazon",
+      job: "Backend Developer"
+    },
+
+  ]
+
+  console.log(jobOpenings);
+  
   return (
     <div className="component-wrapper">
         <Navbar />
