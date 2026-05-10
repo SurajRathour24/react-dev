@@ -5,7 +5,7 @@ const Card = (prop) => {
     <div>
       <div className="mainCard">
             <div className="top-bar">
-              <div className="logo">{prop.companyName}</div>
+              <div className="logo">{prop.title}</div>
               <div className="save-btn">Save</div>
             </div>
             <div className="content">

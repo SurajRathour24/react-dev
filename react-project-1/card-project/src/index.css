@@ -43,6 +43,7 @@ html , body{
   align-items: center;
   gap: 30px;
   margin: 30px;
+  flex-wrap: wrap;
 }
 
 /* Logo Circle */
