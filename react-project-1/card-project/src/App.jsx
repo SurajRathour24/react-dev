@@ -10,7 +10,7 @@ const App = () => {
     title: "Frontend Developer",
     company: "TechNova Solutions",
     location: "Remote",
-    salary: "₹6 LPA - ₹10 LPA",
+    salary: "60",
     experience: "2+ Years",
     skills: ["HTML", "CSS", "JavaScript", "React"],
     type: "Full Time",
@@ -20,7 +20,7 @@ const App = () => {
     title: "UI/UX Designer",
     company: "PixelCraft Studio",
     location: "Chandigarh",
-    salary: "₹4 LPA - ₹7 LPA",
+    salary: "47",
     experience: "1+ Years",
     skills: ["Figma", "Adobe XD", "Wireframing"],
     type: "Full Time",
@@ -30,7 +30,7 @@ const App = () => {
     title: "Backend Developer",
     company: "CodeSphere Pvt Ltd",
     location: "Bangalore",
-    salary: "₹8 LPA - ₹14 LPA",
+    salary: "14",
     experience: "3+ Years",
     skills: ["Node.js", "Express", "MongoDB"],
     type: "Hybrid",
@@ -40,7 +40,7 @@ const App = () => {
     title: "WordPress Developer",
     company: "Creative Edge",
     location: "Remote",
-    salary: "₹3 LPA - ₹6 LPA",
+    salary: "36",
     experience: "1-2 Years",
     skills: ["WordPress", "Elementor", "PHP", "CSS"],
     type: "Freelance",
@@ -50,7 +50,7 @@ const App = () => {
     title: "Full Stack Developer",
     company: "NextGen Apps",
     location: "Pune",
-    salary: "₹10 LPA - ₹18 LPA",
+    salary: "18",
     experience: "4+ Years",
     skills: ["React", "Node.js", "MySQL", "TypeScript"],
     type: "Full Time",
@@ -63,7 +63,7 @@ const App = () => {
 
         <div className="card-container">
           {jobInfo.map(function(elems){
-            return <Card salary={elems.salary} />;
+            return <Card salary={elems.salary} title={elems.title} location={elems.location} company={elems.company} jobID= {elems.id} />;
             // console.log(elems.title);
           })}
 
