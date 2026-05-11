@@ -63,9 +63,8 @@ const App = () => {
 
         <div className="card-container">
           {jobInfo.map(function(elems){
-            return <Card name={elems.salary} />;
+            return <Card salary={elems.salary} />;
             // console.log(elems.title);
-            
           })}
 
         </div>

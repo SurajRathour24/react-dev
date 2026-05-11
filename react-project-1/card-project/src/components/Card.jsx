@@ -18,7 +18,7 @@ const Card = (prop) => {
             </div>
             <div className="card-footer">
               <div className="left-amount">
-                <h6>${prop.rate}/hr </h6>
+                <h6>${prop.salary}/hr </h6>
                 <p>Mumbai India</p>
               </div>
               <button className="primary">Apply Now</button>
