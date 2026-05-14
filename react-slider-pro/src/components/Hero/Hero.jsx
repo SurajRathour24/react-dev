@@ -19,7 +19,7 @@ const Hero = () => {
   }
   let onPageScroll = (val) =>{
     let heading = document.querySelector("h1");
-    if(val > 100){
+    if(val > 400){
       heading.style.color = "pink";
       console.log(val);
       
