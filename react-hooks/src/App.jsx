@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Cards from './components/cards/Cards';
 
 const App = () => {
 
@@ -8,14 +9,44 @@ const App = () => {
     setval("Heading Changed By useState Hook")
   }
 
+  
+  // let sectionCard = document.querySelector(".card");
+
+  const [showCard, setShowCard] = useState(false)
+
+  let showCards = (elems) =>{
+    if(elems > 450){
+      setShowCard(true)
+    }
+  }
+
+
   return (
     <div>
-      <section className="home-hero">
-        <h1>{val}</h1>
-        <button onClick={function(){
-          changeHeading();
-        }}>Click to Change</button>
-      </section>
+      <section onMouseMove={function(elems){
+        showCards(elems.clientY)
+      }} id="section-hero" className="h-150 flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-6 text-center">
+  
+  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl">
+    {val}
+  </h1>
+
+  <button
+    onClick={function () {
+      changeHeading();
+    }}
+    className="mt-8 px-8 py-4 rounded-2xl bg-white text-slate-900 font-semibold text-lg shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:bg-indigo-500 hover:text-white transition-all duration-300"
+  >
+    Click to Change
+  </button>
+
+</section>
+
+ {showCard && (
+        <section className="card p-10">
+          <Cards />
+        </section>
+      )}
     </div>
   )
 }
