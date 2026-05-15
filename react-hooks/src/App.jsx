@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Cards from './components/cards/Cards';
+import Counter from './components/counter/Counter';
 
 const App = () => {
 
@@ -39,6 +40,8 @@ const App = () => {
   >
     Click to Change
   </button>
+
+  <Counter />
 
 </section>
 
