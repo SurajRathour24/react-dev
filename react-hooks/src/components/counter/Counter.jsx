@@ -12,7 +12,7 @@ const Counter = () => {
         setNum(num-1);
       }
     }
-    
+     
   return (
     <div>
       <div className="container mx-auto counter-wrapper flex gap-10 m-8 items-center">
