@@ -4,7 +4,14 @@ const Counter = () => {
 
     const [num, setNum] = useState(0);
 
+    const [user, setuser] = useState({
+      Name : "Suraj",
+      Designation: "Frontend Developer"
+    })
+
     function increaseNum(){
+      console.log(num);
+      
         setNum(num+1)
     }
     function decreaseNum(){
@@ -15,6 +22,7 @@ const Counter = () => {
      
   return (
     <div>
+      
       <div className="container mx-auto counter-wrapper flex gap-10 m-8 items-center">
             <button onClick={decreaseNum} className="cursor-pointer btn py-3 px-5 bg-amber-100">-</button>
                 <h3 className="text-white text-3xl">{num}</h3>
