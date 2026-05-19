@@ -4,17 +4,14 @@ import Counter from './components/counter/Counter';
 
 const App = () => {
 
-      const [user, setuser] = useState({
-      Name : "Suraj",
-      Designation: "Frontend Developer"
-    })
-
+  
 
   const [val, setval] = useState("Hey");
 
   let changeHeading = () =>{
     setval("Heading Changed By useState Hook")
   }
+
 
   
   // let sectionCard = document.querySelector(".card");
@@ -27,6 +24,18 @@ const App = () => {
     }
   }
 
+      const [user, setUser] = useState({
+      Name : "Suraj",
+      Designation: "Frontend Developer"
+    })
+
+    let changeUser = () =>{
+      let userCopy = {...user};
+      userCopy.Name = "Harsh"
+      console.log(user);
+      setUser(userCopy);
+    }
+
 
   return (
     <div>
@@ -34,7 +43,9 @@ const App = () => {
         showCards(elems.clientY)
       }} id="section-hero" className="h-150 flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-6 text-center">
   
-  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl">
+  <h1 onClick={function(){
+changeUser()
+  }} className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl">
     {val} {user.Name}
   </h1>
 
