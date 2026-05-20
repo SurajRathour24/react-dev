@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { X } from 'lucide-react';
 const App = () => {
 
   const [notesHeading, setnotesHeading] = useState("")
@@ -25,6 +25,13 @@ const App = () => {
     setnotesHeading("")
     setDetails("")
 
+  }
+
+  let deleteNote = (idx) =>{
+    // console.log("NOTE deleted");
+    let copyTask = [...task];
+    copyTask.splice(idx,1);
+    settask(copyTask)
   }
   return (
     <div>
@@ -142,12 +149,15 @@ const App = () => {
 <section id="my-notes" className="m-10">
   <div className="flex gap-8 flex-wrap justify-center">
 {task.map(function(item, idx){
-    console.log(idx);
     
     return <div key={idx} className="p-5 text-center my-note bg-white h-[300px] w-[300px] rounded">
       <h2 className="text-2xl font-bold mb-2">{item.notesHeading}</h2>
       <p className="text-lg">{item.details}</p>
-      <button className="py-3
+      <button
+      onClick={() =>{
+        deleteNote(idx)
+      }}
+      className="py-3
       rounded-2xl
       bg-gradient-to-r
       from-indigo-600
@@ -161,7 +171,8 @@ const App = () => {
       hover:scale-[1.02]
       hover:shadow-2xl
       active:scale-[0.98]
-    cursor-pointer px-5 mt-4">Delete Note</button>
+    cursor-pointer px-5 mt-4 flex items-center gap-2 justify-center mx-auto">Delete Note <X /></button>
+    {/* <p className="mt-5">{idx}</p> */}
   </div>
   })}
   </div>
