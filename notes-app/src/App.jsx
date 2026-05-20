@@ -140,10 +140,11 @@ const App = () => {
 </form>
 
 <section id="my-notes" className="m-10">
-  <div className="flex gap-8 wrap-normal">
-{task.map(function(item){
-
-    return <div className="p-5 text-center my-note bg-white h-[300px] w-[300px] rounded">
+  <div className="flex gap-8 flex-wrap justify-center">
+{task.map(function(item, idx){
+    console.log(idx);
+    
+    return <div key={idx} className="p-5 text-center my-note bg-white h-[300px] w-[300px] rounded">
       <h2 className="text-2xl font-bold mb-2">{item.notesHeading}</h2>
       <p className="text-lg">{item.details}</p>
       <button className="py-3
