@@ -4,10 +4,6 @@ const Counter = () => {
 
     const [num, setNum] = useState(0);
 
-    const [user, setuser] = useState({
-      Name : "Suraj",
-      Designation: "Frontend Developer"
-    })
 
     function increaseNum(){
       console.log(num);

@@ -30,10 +30,15 @@ const App = () => {
     })
 
     let changeUser = () =>{
-      let userCopy = {...user};
-      userCopy.Name = "Harsh"
-      console.log(user);
-      setUser(userCopy);
+      // let userCopy = {...user};
+      // userCopy.Name = "Harsh"
+      // console.log(user);
+      // setUser(userCopy);
+      // console.log(user);
+
+      // Method 2 
+
+      setUser(prev=>({...prev, Name:"ABC" }))
     }
 
 
@@ -46,7 +51,7 @@ const App = () => {
   <h1 onClick={function(){
 changeUser()
   }} className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl">
-    {val} {user.Name}
+    {user.Name} {val} 
   </h1>
 
   <button
