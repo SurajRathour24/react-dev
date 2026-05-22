@@ -8,7 +8,7 @@ const App = () => {
   let getData = async () =>{
    let response = await axios.get("https://picsum.photos/v2/list?page=2&limit=10")
    let data = response.data 
-  //  console.log(data);
+   console.log(data);
    setUserProfiles(data)
   }
 
@@ -21,7 +21,8 @@ const App = () => {
   if(userProfiles.length > 0){
     printUserData = userProfiles.map(function(user, idx){
       return <div key={idx}>
-        <img width="500px" src={user.download_url} alt="image" />
+        <a href={user.url} target="_blank"><img className="rounded-2xl" width="500px" src={user.download_url} alt="image" /></a>
+        
       </div>
       // console.log("Running");
       
@@ -37,7 +38,7 @@ const App = () => {
       className="bg-green-600 px-8 py-4 rounded m-4 active:scale-110">Get data</button>
 
       <div className="userData">
-       <h1 className="text-white text-2xl flex justify-center align-middle flex-wrap gap-4">{printUserData}</h1>
+       <div className="text-white text-2xl flex justify-center align-middle flex-wrap gap-4">{printUserData}</div>
       </div>
     </div>
   )
