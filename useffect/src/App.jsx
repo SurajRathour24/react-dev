@@ -49,6 +49,7 @@ const App = () => {
   let getPrevData = async () =>{
     let response = await axios.get("https://picsum.photos/v2/list?page=1&limit=5");
     let data = response.data
+    setUserProfiles(data);
   }
 
   return (
