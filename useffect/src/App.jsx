@@ -10,7 +10,7 @@ const App = () => {
       "https://picsum.photos/v2/list?page=1&limit=5",
     );
     let data = response.data;
-    // console.log(data);
+    console.log(data);
     setUserProfiles(data);
   };
 
@@ -40,8 +40,10 @@ const App = () => {
     });
   }
 
+  const [val, setval] = useState(0)
   let getNextData = async () =>{
-    let response = await axios.get("https://picsum.photos/v2/list?page=2&limit=5");
+    setval(val+1)
+    let response = await axios.get(`https://picsum.photos/v2/list?page= ${val} &limit=5`);
     let data = response.data;
     setUserProfiles(data);
   }
