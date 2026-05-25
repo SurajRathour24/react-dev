@@ -42,14 +42,19 @@ const App = () => {
 
   const [val, setval] = useState(0)
   let getNextData = async () =>{
-    setval(val+1)
-    let response = await axios.get(`https://picsum.photos/v2/list?page= ${val} &limit=5`);
+    let nextPage = val+1
+    setval(nextPage)
+    console.log(nextPage);
+    
+    let response = await axios.get(`https://picsum.photos/v2/list?page=${val}&limit=5`);
     let data = response.data;
     setUserProfiles(data);
   }
 
   let getPrevData = async () =>{
-    let response = await axios.get("https://picsum.photos/v2/list?page=1&limit=5");
+    let prevPage = val-1;
+    setval(prevPage);
+    let response = await axios.get(`https://picsum.photos/v2/list?page=${val}&limit=5`);
     let data = response.data
     setUserProfiles(data);
   }
