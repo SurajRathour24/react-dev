@@ -18,7 +18,7 @@ const App = () => {
     getData();
   }, []);
 
-  let printUserData = "No User Avail...";
+  let printUserData = <h3 className="flex justify-center align-middle items-center h-screen"> Loading ... </h3>
 
   //  const [printUserData, setPrintUserData] = useState("No User Avail...")
 
@@ -42,7 +42,7 @@ const App = () => {
 
   const [val, setval] = useState(0)
   let getNextData = async () =>{
-    let nextPage = val+1
+    let nextPage = val+3
     setval(nextPage)
     console.log(nextPage);
     
@@ -52,7 +52,7 @@ const App = () => {
   }
 
   let getPrevData = async () =>{
-    let prevPage = val-1;
+    let prevPage = val-3;
     setval(prevPage);
     let response = await axios.get(`https://picsum.photos/v2/list?page=${val}&limit=5`);
     let data = response.data
