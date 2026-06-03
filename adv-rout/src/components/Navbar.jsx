@@ -1,4 +1,6 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -10,8 +12,7 @@ const Navbar = () => {
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     
     <div className="flex items-center justify-between h-20">
-      
-
+     
       <a href="#" className="flex items-center gap-2">
         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">
           D
@@ -23,31 +24,28 @@ const Navbar = () => {
 
 
       <div className="hidden md:flex items-center gap-8">
-        
-        <a href="#" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">
-          Home
-          <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
+        <Link to="/" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">Home
+        <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
 
-        <a href="#" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">
-          About
-          <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
 
-        <a href="#" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">
-          Services
-          <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
+        <Link to="/about-us" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">About Us
+        <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
 
-        <a href="#" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">
-          Blog
-          <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
 
-        <a href="#" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">
-          Contact
-          <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
+        <Link to="/services" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">Services
+        <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+
+
+        <Link to="/blog" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">Blogs
+        <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+
+        <Link to="/contact-us" className="relative text-gray-700 font-medium transition-all duration-300 hover:text-indigo-600 group">Contact Us
+        <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
 
       </div>
 
