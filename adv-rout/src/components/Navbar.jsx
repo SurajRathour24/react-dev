@@ -1,4 +1,9 @@
+import React from 'react'
 
+const Navbar = () => {
+  return (
+    <div>
+      
 
 
 <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
@@ -70,3 +75,8 @@
 
   </div>
 </nav>
+    </div>
+  )
+}
+
+export default Navbar
