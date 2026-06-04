@@ -27,11 +27,7 @@ const NotFound = () => {
         </h2>
 
    
-        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            The page you're looking for may have been moved, deleted,
-            or never existed. Let's get you back to exploring
-            healthy skin and confidence.
-        </p>
+        
 
     </div>
 
