@@ -1,4 +1,5 @@
 import React from 'react'
+import {Routes, Route} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -47,6 +48,7 @@ const Footer = () => {
                 <ul className="space-y-4 text-gray-400">
 
                     <li>
+                        {/* <Link path="/" element={<Home />}></Link> */}
                         <a href="#" className="hover:text-[#dab46f] transition">
                             Home
                         </a>
