@@ -3,9 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <!-- =========================
- HERO SECTION
-========================= -->
+
 <section className="relative overflow-hidden py-24 lg:py-32">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -45,9 +43,7 @@ const Home = () => {
 </section>
 
 
-<!-- =========================
- ABOUT US
-========================= -->
+
 <section className="py-24">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -92,10 +88,6 @@ const Home = () => {
   </div>
 </section>
 
-
-<!-- =========================
- TESTIMONIALS
-========================= -->
 <section className="py-24 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -151,9 +143,7 @@ const Home = () => {
 </section>
 
 
-<!-- =========================
- CTA SECTION
-========================= -->
+
 <section className="py-24">
   <div className="max-w-6xl mx-auto px-6 lg:px-8">
 
