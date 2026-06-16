@@ -201,7 +201,7 @@ const Contact = () => {
             <iframe
                 src="https://maps.google.com/maps?q=chandigarh&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
-                height="500"
+                height="600"
                 style="border:0;"
                 allowfullscreen=""
                 loading="lazy">
