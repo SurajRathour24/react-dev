@@ -17,7 +17,7 @@ const Services = () => {
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Experiences
             </span>
-            That Scale
+            That Scale 
         </h1>
 
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-400">
