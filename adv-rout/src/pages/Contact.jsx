@@ -18,6 +18,7 @@ const Contact = () => {
                 Amazing Together
             </span>
         </h1>
+        
 
         <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400">
             Have a project in mind? Need a website, mobile app, or custom software?
