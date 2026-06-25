@@ -225,6 +225,12 @@ const Footer = () => {
 
     </div>
 
+<div id="tl-loader">
+    <div className="tl-loader-content">
+        <div className="tl-spinner"></div>
+        <span className="tl-loading-text">Loading</span>
+    </div>
+</div>
 </footer>
     </div>
   )
