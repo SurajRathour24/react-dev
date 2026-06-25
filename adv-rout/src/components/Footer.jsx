@@ -231,6 +231,7 @@ const Footer = () => {
         <span className="tl-loading-text">Loading</span>
     </div>
 </div>
+
 </footer>
     </div>
   )

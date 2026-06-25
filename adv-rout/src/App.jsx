@@ -34,4 +34,18 @@ const App = () => {
   )
 }
 
+
+window.addEventListener('load', function () {
+    const loader = document.getElementById('tl-loader');
+
+    setTimeout(() => {
+        loader.classList.add('tl-hide');
+
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+
+    }, 500); // Optional delay
+});
+
 export default App
